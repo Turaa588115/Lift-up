@@ -37,7 +37,7 @@ async function generateWithAI(lang: string): Promise<string | null> {
         ? "Genereer één korte, veilige, positieve motiverende quote in het Nederlands (max 18 woorden)."
         : "Generate one short, safe, positive motivational quote in English (max 18 words).";
 
-    const resp = await fetch("https://api.openai.com/v1/responses", {
+    const resp = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${key}`,
@@ -45,17 +45,26 @@ async function generateWithAI(lang: string): Promise<string | null> {
       },
       body: JSON.stringify({
         model: "gpt-4o-mini",
-        input: prompt,
+        messages: [
+          {
+            role: "system",
+            content: "You are a helpful assistant that generates short, positive, safe motivational quotes."
+          },
+          {
+            role: "user",
+            content: prompt
+          }
+        ],
         temperature: 0.7,
-        max_output_tokens: 50
+        max_tokens: 50
       })
     });
 
     if (!resp.ok) return null;
     const data = await resp.json();
-    const text = (data.output?.[0]?.content?.[0]?.text as string) || (data.choices?.[0]?.text as string) || "";
+    const text = data.choices?.[0]?.message?.content?.trim() || "";
     if (!text || !moderate(text)) return null;
-    return text.trim().replace(/^"|"$/g, "");
+    return text.replace(/^"|"$/g, "");
   } catch {
     return null;
   }
