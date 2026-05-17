@@ -1,7 +1,7 @@
 # Inleiding – Slim Kasbeheer
 
 ## Korte context
-Deze collectie beschrijft mijn project **Slim Kasbeheer**. De uitdaging is om twee kasomgevingen veilig te laten samenwerken met een centrale server, zonder dat ongewenst verkeer tussen zones mogelijk is. Daarom heb ik een gesegmenteerd netwerkontwerp gemaakt met duidelijke rollen voor gebruikers, beheer en systemen. Belanghebbenden zijn de kasoperator (betrouwbare metingen en sturing), technisch beheer (veilig en beheerbaar netwerk) en management (continuïteit en schaalbaarheid).
+Deze collectie beschrijft mijn project **Slim Kasbeheer**. De uitdaging is om twee kasomgevingen veilig te laten samenwerken met een centrale server, zonder dat ongewenst verkeer tussen zones mogelijk is. Daarom heb ik een gesegmenteerd netwerkontwerp gemaakt met duidelijke rollen voor gebruikers, beheer en systemen. Belanghebbenden zijn de kasoperator (betrouwbare metingen en sturing), technisch beheer (veilig en beheerbaar netwerk) en management (continuïteit en schaalbaarheid). In deze tekst gebruik ik `@...` als verwijzing naar bewijsstukken binnen dezelfde collectie.
 
 ## Projectvoortgang (stappen 1 tot en met 4)
 - **Stap 1 (analyse):** Ik heb het probleem, de eisen en de stakeholders uitgewerkt in @Analyse.  
@@ -13,7 +13,7 @@ Deze collectie beschrijft mijn project **Slim Kasbeheer**. De uitdaging is om tw
 Voor dit project heb ik gewerkt met **Cisco Packet Tracer** (netwerk-PoC), **Notepad++** (uitwerking/configuratie), **HiveMQ Cloud (Starter)** (MQTT-broker) en **Python MQTT clients** voor sensor, controller en actuator. In deze collectie staan geen wachtwoorden of andere gevoelige gegevens.
 
 ## Bewijstukken en granulariteit
-Per sprint houd ik de collectie compact met **2 tot 3 bewijstukken**. Elk bewijsstuk bevat: (1) het probleem en waarom dit relevant is, (2) mijn aanpak en keuzes, (3) resultaat met validatie (bijv. testuitvoer/screenshot), en (4) de volgende stap. Zo blijft de informatie volledig, maar wel overzichtelijk.
+Per sprint (tijdgebonden projectiteratie) houd ik de collectie compact met **2 tot 3 bewijstukken**. Elk bewijsstuk bevat: (1) het probleem en waarom dit relevant is, (2) mijn aanpak en keuzes, (3) resultaat met validatie (bijv. testuitvoer/screenshot), en (4) de volgende stap. Zo blijft de informatie volledig, maar wel overzichtelijk.
 
 ## Aanvullende bewijsstukken
 Voor reflectie op mijn leerproces verwijs ik naar @Reflectie. Voor planning, samenwerking en professionele ontwikkeling verwijs ik naar @Persoonlijk-Leiderschap.
