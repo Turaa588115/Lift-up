@@ -5,7 +5,7 @@ Dit document beschrijft hoe het systeem operationeel beheerd, gemonitord en geco
 
 ## Beheerprocessen
 1. **Configuratiebeheer**
-   - VLAN-, trunk- en ACL-configuraties versiebeheerbaar vastleggen.
+   - VLAN-, trunk- en ACL-configuraties onder versiebeheer vastleggen.
    - Wijzigingen alleen via change-procedure (wie, wat, waarom, rollback).
 
 2. **Toegangsbeheer**
